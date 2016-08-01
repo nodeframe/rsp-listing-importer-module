@@ -28,5 +28,6 @@
     "dev": "node_modules/.bin/gulp dev",
     "start": "node .bin/server.js",
     "build": "node_modules/.bin/gulp build"
-  }
+  },
+  "main": "dist/src/index.js"
 }
