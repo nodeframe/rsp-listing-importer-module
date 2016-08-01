@@ -2,7 +2,7 @@
   "name": "node-module-typescript-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/src/index.js",
   "directories": {
     "test": "test"
   },
@@ -29,5 +29,5 @@
     "start": "node .bin/server.js",
     "build": "node_modules/.bin/gulp build"
   },
-  "main": "dist/src/index.js"
+  "typings": "./dist/typings/index.d.ts"
 }

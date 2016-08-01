@@ -7,8 +7,11 @@ const spawn = require('child_process').spawn;
 const mocha = require('gulp-mocha');
 const sourcemaps = require('gulp-sourcemaps');
 const ts = require('gulp-typescript');
+const merge = require('merge2');
+
 var tsSrcProject = ts.createProject('tsconfig.json', {
-  sourceMap: true
+  sourceMap: true,
+  declaration: true
 });
 var tsTestProject = ts.createProject('tsconfig.json', {
   sourceMap: true
@@ -25,8 +28,11 @@ gulp.task('build:ts',()=> {
       .pipe(sourcemaps.init())
       .pipe(ts(tsSrcProject));
 
-  return tsResult.js.pipe(sourcemaps.write('.', {sourceRoot: './src'}))
-      .pipe(gulp.dest('./dist/src'));
+  return merge([
+          tsResult.js.pipe(sourcemaps.write('.', {sourceRoot: './src'}))
+          .pipe(gulp.dest('./dist/src')),
+          tsResult.dts.pipe(gulp.dest('./dist/typings'))
+        ]);
 });
 
 gulp.task('build:test',()=> {
