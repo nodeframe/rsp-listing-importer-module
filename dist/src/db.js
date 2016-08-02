@@ -31,7 +31,6 @@ var Database = (function () {
     };
     return Database;
 }());
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = Database;
+exports.Database = Database;
 
 //# sourceMappingURL=db.js.map

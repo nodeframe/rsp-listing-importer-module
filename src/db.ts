@@ -16,7 +16,7 @@ export interface IDatabaseHostConfig {
   port:string;
 }
 
-export default class Database {
+export class Database {
   private db:mongoose.Connection;
   public Listing:mongoose.Model<IListingModel>;
   constructor(private config:IDatabaseHostConfig = db_config){

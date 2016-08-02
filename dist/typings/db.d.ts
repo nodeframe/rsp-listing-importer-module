@@ -7,7 +7,7 @@ export interface IDatabaseHostConfig {
     collection: string;
     port: string;
 }
-export default class Database {
+export declare class Database {
     private config;
     private db;
     Listing: mongoose.Model<IListingModel>;
