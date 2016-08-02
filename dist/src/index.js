@@ -1,7 +1,5 @@
 "use strict";
 var db_1 = require('./db');
-var startDBConnection = db_1.default.startConnection;
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = startDBConnection;
+exports.Database = db_1.default;
 
 //# sourceMappingURL=index.js.map

@@ -1,5 +1,4 @@
 // Main file
-import listingsDB from './db';
-
-var startDBConnection = listingsDB.startConnection;
-export default startDBConnection;
+import Database from './db';
+export {Database};
+export {IListingModel} from "./model/listing";

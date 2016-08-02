@@ -9,9 +9,11 @@
     "seneca": "registry:dt/seneca#2.1.0+20160619034151",
     "serve-static": "registry:dt/serve-static#0.0.0+20160606155157",
     "superagent": "registry:dt/superagent#1.4.0+20160317120654",
-    "supertest-as-promised": "registry:dt/supertest-as-promised#2.0.2+20160317120654"
+    "supertest-as-promised": "registry:dt/supertest-as-promised#2.0.2+20160317120654",
+    "flat": "registry:dt/flat#0.0.0+20160317120654"
   },
   "dependencies": {
-    "bluebird": "registry:npm/bluebird#3.3.4+20160622205516"
+    "bluebird": "registry:npm/bluebird#3.3.4+20160622205516",
+    "mongoose": "registry:npm/mongoose#4.3.5+20160610145311"
   }
 }

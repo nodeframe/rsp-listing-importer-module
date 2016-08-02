@@ -1,2 +1,3 @@
-declare var startDBConnection: () => void;
-export default startDBConnection;
+import Database from './db';
+export { Database };
+export { IListingModel } from "./model/listing";

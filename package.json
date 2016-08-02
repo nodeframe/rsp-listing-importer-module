@@ -32,6 +32,9 @@
   "typings": "./dist/typings/index.d.ts",
   "dependencies": {
     "bluebird": "^3.4.1",
+    "flat": "^2.0.1",
+    "googlemaps": "^1.11.1",
+    "humps": "^1.1.0",
     "mongoose": "^4.5.8"
   }
 }
