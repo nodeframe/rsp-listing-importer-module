@@ -1,11 +1,5 @@
 // Main file
-export default class TestClass {
-  constructor(){
-    console.log("create test class");
-  }
+import listingsDB from './db';
 
-  public testGet(){
-    console.log("test get");
-  }
-
-}
+var startDBConnection = listingsDB.startConnection;
+export default startDBConnection;

@@ -1,5 +1,5 @@
 {
-  "name": "node-module-typescript-boilerplate",
+  "name": "rsp-listing-importer-module",
   "version": "1.0.0",
   "description": "",
   "main": "dist/src/index.js",
@@ -26,8 +26,12 @@
   "scripts": {
     "test": "node_modules/.bin/gulp test",
     "dev": "node_modules/.bin/gulp dev",
-    "start": "node .bin/server.js",
+    "start": "node dist/src/index.js",
     "build": "node_modules/.bin/gulp build"
   },
-  "typings": "./dist/typings/index.d.ts"
+  "typings": "./dist/typings/index.d.ts",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "mongoose": "^4.5.8"
+  }
 }

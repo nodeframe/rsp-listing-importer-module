@@ -1,4 +1,2 @@
-export default class TestClass {
-    constructor();
-    testGet(): void;
-}
+declare var startDBConnection: () => void;
+export default startDBConnection;
