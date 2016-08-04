@@ -1,7 +1,7 @@
 import * as chai from 'chai';
 const expect = chai.expect;
 
-import Database from '../src/db';
+import {Database} from '../src/db';
 
 describe('Test database connect', ()=> {
   it("should connect properly", ()=> {
