@@ -60,7 +60,7 @@ export abstract class ListingImporter {
   }
 
   inActiveListings():Promise<any> {
-    return (<any>this.db_connection.Listing).updateAsync({
+    return this.db_connection.Listing.updateAsync({
       status: 'active',
       source_type: this.source_type
     }, {
