@@ -7,6 +7,7 @@ export abstract class ListingImporter {
   dataMapperKlass:any;
   gateway:any;
   db_connection:any;
+  gmap_conf:string;
 
   abstract beginImport():void;
 
@@ -14,7 +15,7 @@ export abstract class ListingImporter {
 
   updateGeocode(listing:IListingModel) {
     return new Promise((resolve, reject) => {
-      var gmAPI = new GoogleMapsAPI(config.googlemap);
+      var gmAPI = new GoogleMapsAPI(this.gmap_conf);
       var maps_params = {address: listing.address.full};
       gmAPI.geocode(maps_params, (err, result_set) => {
         if (err) {
