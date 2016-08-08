@@ -63,6 +63,7 @@ interface IListing {
   }
   pet_allowed: [string],
   status: string,
+  last_updated: Date
 }
 var ListingSchema = new Schema({
   address: {
@@ -125,8 +126,9 @@ var ListingSchema = new Schema({
     broker_offices: [Schema.Types.Mixed]
   },
   pet_allowed: [String],
-  status: String
+  status: String,
+  last_updated: Date
 });
 
 
-export {IListing, ListingSchema} ;
+export {IListing, ListingSchema};

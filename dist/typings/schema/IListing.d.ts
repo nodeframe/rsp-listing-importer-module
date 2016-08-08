@@ -60,6 +60,7 @@ interface IListing {
     };
     pet_allowed: [string];
     status: string;
+    last_updated: Date;
 }
 declare var ListingSchema: Schema;
 export { IListing, ListingSchema };

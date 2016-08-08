@@ -60,7 +60,8 @@ var ListingSchema = new mongoose_1.Schema({
         broker_offices: [mongoose_1.Schema.Types.Mixed]
     },
     pet_allowed: [String],
-    status: String
+    status: String,
+    last_updated: Date
 });
 exports.ListingSchema = ListingSchema;
 
