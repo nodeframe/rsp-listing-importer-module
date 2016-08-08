@@ -1,6 +1,5 @@
 import {IListingModel} from "../model/listing";
 const GoogleMapsAPI = require('googlemaps');
-import config from "./../config";
 import Promise = require('bluebird');
 
 export abstract class ListingImporter {
@@ -8,10 +7,9 @@ export abstract class ListingImporter {
   gateway:any;
   db_connection:any;
   gmap_conf:string;
+  source_type:string;
 
   abstract beginImport():void;
-
-  source_type:string;
 
   updateGeocode(listing:IListingModel) {
     return new Promise((resolve, reject) => {

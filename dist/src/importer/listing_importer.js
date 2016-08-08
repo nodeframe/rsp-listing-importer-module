@@ -1,13 +1,13 @@
 "use strict";
 var GoogleMapsAPI = require('googlemaps');
-var config_1 = require("./../config");
 var Promise = require('bluebird');
 var ListingImporter = (function () {
     function ListingImporter() {
     }
     ListingImporter.prototype.updateGeocode = function (listing) {
+        var _this = this;
         return new Promise(function (resolve, reject) {
-            var gmAPI = new GoogleMapsAPI(config_1.default.googlemap);
+            var gmAPI = new GoogleMapsAPI(_this.gmap_conf);
             var maps_params = { address: listing.address.full };
             gmAPI.geocode(maps_params, function (err, result_set) {
                 if (err) {

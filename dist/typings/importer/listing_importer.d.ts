@@ -4,8 +4,9 @@ export declare abstract class ListingImporter {
     dataMapperKlass: any;
     gateway: any;
     db_connection: any;
-    abstract beginImport(): void;
+    gmap_conf: string;
     source_type: string;
+    abstract beginImport(): void;
     updateGeocode(listing: IListingModel): Promise<{}>;
     inActiveListings(): Promise<any>;
 }
