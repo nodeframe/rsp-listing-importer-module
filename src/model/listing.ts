@@ -1,23 +1,6 @@
 import mongoose = require("mongoose");
-import {IListing, ListingSchema} from '../schema/IListing';
+import {IListing} from '../schema/IListing';
 import Promise = require('bluebird');
-
-ListingSchema.static("createFromJSON", function (json:any, source:string) {
-
-});
-
-ListingSchema.virtual('address.full').get(function () {
-  var add = [this.address.street,
-    this.address.unit_number,
-    this.address.city,
-    this.address.state,
-    this.address.postal_code,
-    this.address.country];
-  add = add.filter(function (v) {
-    return v
-  });
-  return add.join(', ');
-});
 
 
 interface IListingModel extends IListing, mongoose.Document, MongoosePromisified {

@@ -30,6 +30,21 @@ export class Database {
   }
 
   private createModel(){
+    ListingSchema.static("createFromJSON", function (json:any, source:string) {
+
+    });
+    ListingSchema.virtual('address.full').get(function () {
+      var add = [this.address.street,
+        this.address.unit_number,
+        this.address.city,
+        this.address.state,
+        this.address.postal_code,
+        this.address.country];
+      add = add.filter(function (v) {
+        return v
+      });
+      return add.join(', ');
+    });
     this.Listing = this.db.model<IListingModel>("Listing", ListingSchema);
   }
 
