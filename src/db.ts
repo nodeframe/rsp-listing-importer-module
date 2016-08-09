@@ -20,7 +20,7 @@ export class Database {
   private db:mongoose.Connection;
   public Listing:mongoose.Model<IListingModel>;
   constructor(private config:IDatabaseHostConfig = db_config){
-    this.connect();
+    // this.connect();
   }
 
   public connect() {

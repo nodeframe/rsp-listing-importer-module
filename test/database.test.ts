@@ -131,11 +131,11 @@ describe('Test database connect', ()=> {
       status: 'active'
     });
     ls.saveAsync().then(()=>{
-      db.disconnect();
+      // db.disconnect();
     });
   });
 
-  it("should be able to run full() method on address", () => {
+  xit("should be able to run full() method on address", () => {
     var db = new Database();
     var ls = new db.Listing({
       address: {
