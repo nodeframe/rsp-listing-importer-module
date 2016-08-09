@@ -9,7 +9,6 @@ var Database = (function () {
     function Database(config) {
         if (config === void 0) { config = db_config; }
         this.config = config;
-        this.connect();
     }
     Database.prototype.connect = function () {
         var uri = "mongodb://" + this.config.host + ":" + this.config.port + "/" + this.config.collection;
